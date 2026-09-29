@@ -42,10 +42,11 @@
    * 2-Bar and 4-Bar audio monitoring with selectable dBVU (-20 to +3 VU) and dBFS (-60 to 0 dBFS) scales.
    * Instant red **`DIGITAL CLIP!`** indicator if audio signal exceeds 0 dBFS to prevent distortion.
 
-5. **Camera Broadcaster & Larix Reference:**
+5. **Camera Broadcaster & Manual Sensor Controls:**
    * **Pocket Broadcaster Tool:** Turn your smartphone into a live broadcast video camera pushing directly to the gateway (RTMP/SRT) with hardware H.264 encoding.
+   * **Manual Camera2 Controls:** Real-time on-screen controls for ISO sensitivity (Auto / 100–3200), Exposure compensation (EV), Zoom ratio (1x–5x), White Balance presets (Daylight, Cloudy, Fluorescent, Incandescent), AF/MF focus, and venue Torch.
    * **Live OSD & Tally:** Monospace elapsed timecode, audio VU meter, resolution selector (1080p, 720p, 480p), bitrate controls (2.0–8.0 Mbps), camera flip, and mic mute.
-   * **External Larix Broadcaster Guide:** Built-in engineering reference with 1-click copy URLs for configuring standalone Larix Broadcaster apps over SRT Caller.
+   * **External Contribution Endpoints:** Built-in engineering reference with 1-click copy URLs for configuring standalone hardware or software encoders over SRT Caller and RTMP.
 
 6. **Broadcast Route Management & Failover:**
    * Full CRUD operations: Create, edit, activate, deactivate, and delete routes.

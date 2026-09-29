@@ -54,10 +54,11 @@ Dokumen ini berisi panduan penggunaan aplikasi mobile **Makasna Remote** untuk m
 * Dapat memilih skala **dBFS** (-60 hingga 0 dBFS) atau **dBVU** (-20 hingga +3 VU).
 * Jika indikator merah **`DIGITAL CLIP!`** menyala, sinyal audio lapangan mengalami distorsi digital (overload 0 dBFS). Minta operator audio lapangan segera menurunkan gain mixer.
 
-### D. Tab Camera (Pocket Broadcaster & Panduan Larix)
-* **Kamera Siaran HP Mandiri:** Mengubah smartphone menjadi kamera siaran langsung (*pocket broadcast camera*) yang mem-push video H.264 live ke gateway server tanpa perlu aplikasi pihak ketiga.
-* **Kontrol Encoder:** Pilihan resolusi (1080p, 720p, 480p), bitrate target (2.0–8.0 Mbps), switch kamera depan/belakang, dan mute mikrofon.
-* **Panduan Pengaturan Larix Broadcaster:** Menyediakan instruksi parameter dan tombol 1-klik salin URL untuk operator yang ingin menggunakan aplikasi eksternal Larix Broadcaster via SRT Caller port 8890.
+### D. Tab Camera (Pocket Broadcaster & Manual Sensor Controls)
+* **Kamera Siaran HP Mandiri:** Mengubah smartphone menjadi kamera siaran langsung (*pocket broadcast camera*) yang mem-push video H.264 live ke gateway server.
+* **Kontrol Kamera Manual (Camera API):** Pengaturan langsung sensor kamera dari layar aplikasi, meliputi sensitivitas ISO (Auto / 100–3200), Kompensasi Eksposur (EV), Zoom (1x–5x), White Balance (Daylight, Cloudy, Lampu Pijar), AF/MF, dan lampu sorot Torch.
+* **Kontrol Encoder Siaran:** Pilihan resolusi (1080p, 720p, 480p), bitrate target (2.0–8.0 Mbps), switch kamera depan/belakang, dan mute mikrofon.
+* **Titik Koneksi Encoder Eksternal:** Menyediakan daftar URL siaran standar (SRT Caller port 8890 dan RTMP port 1935) dengan tombol 1-klik salin untuk kru lapangan yang menggunakan encoder perangkat keras eksternal.
 
 ### E. Tab Routes (Manajemen Jalur Siaran)
 * Mengaktifkan atau menonaktifkan rute transmisi siaran secara langsung.
