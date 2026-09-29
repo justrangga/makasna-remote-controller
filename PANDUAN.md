@@ -54,7 +54,12 @@ Dokumen ini berisi panduan penggunaan aplikasi mobile **Makasna Remote** untuk m
 * Dapat memilih skala **dBFS** (-60 hingga 0 dBFS) atau **dBVU** (-20 hingga +3 VU).
 * Jika indikator merah **`DIGITAL CLIP!`** menyala, sinyal audio lapangan mengalami distorsi digital (overload 0 dBFS). Minta operator audio lapangan segera menurunkan gain mixer.
 
-### D. Tab Routes (Manajemen Jalur Siaran)
+### D. Tab Camera (Pocket Broadcaster & Panduan Larix)
+* **Kamera Siaran HP Mandiri:** Mengubah smartphone menjadi kamera siaran langsung (*pocket broadcast camera*) yang mem-push video H.264 live ke gateway server tanpa perlu aplikasi pihak ketiga.
+* **Kontrol Encoder:** Pilihan resolusi (1080p, 720p, 480p), bitrate target (2.0–8.0 Mbps), switch kamera depan/belakang, dan mute mikrofon.
+* **Panduan Pengaturan Larix Broadcaster:** Menyediakan instruksi parameter dan tombol 1-klik salin URL untuk operator yang ingin menggunakan aplikasi eksternal Larix Broadcaster via SRT Caller port 8890.
+
+### E. Tab Routes (Manajemen Jalur Siaran)
 * Mengaktifkan atau menonaktifkan rute transmisi siaran secara langsung.
 * Menambah rute baru dengan tombol **CREATE ROUTE**.
 * Mengonfigurasi failover sumber primer dan sekunder agar siaran tidak terputus saat koneksi internet utama bermasalah.

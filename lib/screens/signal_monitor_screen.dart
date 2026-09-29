@@ -8,6 +8,7 @@ import '../widgets/metric_card.dart';
 import 'live_preview_screen.dart';
 import 'route_editor_screen.dart';
 import 'welcome_server_screen.dart';
+import 'camera_broadcaster_screen.dart';
 
 class SignalMonitorScreen extends StatefulWidget {
   const SignalMonitorScreen({Key? key}) : super(key: key);
@@ -276,6 +277,18 @@ class _SignalMonitorScreenState extends State<SignalMonitorScreen> with SingleTi
         ),
         actions: [
           IconButton(
+            icon: const Icon(Icons.videocam, color: MakasnaTheme.cyan),
+            tooltip: 'Launch Camera Broadcaster',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const CameraBroadcasterScreen(isTabActive: true),
+                ),
+              );
+            },
+          ),
+          IconButton(
             icon: const Icon(Icons.dns_outlined, color: MakasnaTheme.cyan),
             tooltip: 'Switch Server / Guide',
             onPressed: () {
@@ -390,12 +403,33 @@ class _SignalMonitorScreenState extends State<SignalMonitorScreen> with SingleTi
                     ? Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(Icons.videocam_off_outlined, size: 40, color: MakasnaTheme.textDim),
-                            SizedBox(height: 10),
-                            Text(
+                          children: [
+                            const Icon(Icons.videocam_off_outlined, size: 40, color: MakasnaTheme.textDim),
+                            const SizedBox(height: 10),
+                            const Text(
                               'No encoder publishers connected to port 8890',
                               style: TextStyle(color: MakasnaTheme.textDim, fontSize: 13),
+                            ),
+                            const SizedBox(height: 14),
+                            ElevatedButton.icon(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: MakasnaTheme.cyan,
+                                foregroundColor: Colors.black,
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const CameraBroadcasterScreen(isTabActive: true),
+                                  ),
+                                );
+                              },
+                              icon: const Icon(Icons.videocam, size: 18),
+                              label: const Text(
+                                'BROADCAST FROM THIS PHONE',
+                                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                              ),
                             ),
                           ],
                         ),

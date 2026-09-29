@@ -295,7 +295,7 @@ class _HyperdeckRecorderScreenState extends State<HyperdeckRecorderScreen> {
                             ),
                           ),
                           onPressed: rec.state.active ? null : () => rec.setBitrateMode('passthrough'),
-                          child: const Text('Original Stream (Copy)'),
+                          child: const Text('Original Stream'),
                         ),
                       ),
                       const SizedBox(width: 10),

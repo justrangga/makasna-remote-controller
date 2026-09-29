@@ -5,6 +5,7 @@ import '../providers/gateway_provider.dart';
 import '../providers/recorder_provider.dart';
 import 'signal_monitor_screen.dart';
 import 'hyperdeck_recorder_screen.dart';
+import 'camera_broadcaster_screen.dart';
 import 'routes_screen.dart';
 import 'settings_profile_screen.dart';
 
@@ -18,22 +19,23 @@ class HomeNavigationScreen extends StatefulWidget {
 class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
   int _currentIndex = 0;
 
-  final List<Widget> _screens = const [
-    SignalMonitorScreen(),
-    HyperdeckRecorderScreen(),
-    RoutesScreen(),
-    SettingsProfileScreen(),
-  ];
-
   @override
   Widget build(BuildContext context) {
     final gateway = context.watch<GatewayProvider>();
     final rec = context.watch<RecorderProvider>();
 
+    final screens = [
+      const SignalMonitorScreen(),
+      const HyperdeckRecorderScreen(),
+      CameraBroadcasterScreen(isTabActive: _currentIndex == 2),
+      const RoutesScreen(),
+      const SettingsProfileScreen(),
+    ];
+
     return Scaffold(
       body: IndexedStack(
         index: _currentIndex,
-        children: _screens,
+        children: screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -91,6 +93,11 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
               ],
             ),
             label: 'Recorder',
+          ),
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.videocam_outlined),
+            activeIcon: Icon(Icons.videocam, color: MakasnaTheme.cyan),
+            label: 'Camera',
           ),
           BottomNavigationBarItem(
             icon: Stack(
